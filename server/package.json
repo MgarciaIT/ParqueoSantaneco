@@ -13,6 +13,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "install": "install",
     "start": "nodemon index.js"
   },
   "keywords": [],
