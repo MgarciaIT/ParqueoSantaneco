@@ -1,0 +1,18 @@
+@import "../../style.scss";
+
+.usuarios {
+    @include themify($themes){
+        background-color: themed("bgSoft");
+        color: themed("icon");
+        padding: 20px 70px;
+        height: 94vh;
+
+        @include mobile{
+            padding: 10px;
+        }
+    }
+    .form {
+        display: flex;
+        padding: 10px;
+    }
+}

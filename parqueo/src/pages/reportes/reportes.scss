@@ -1,0 +1,14 @@
+@import "../../style.scss";
+
+.reportes {
+    @include themify($themes){
+        background-color: themed("bgSoft");
+        color: themed("icon");
+        padding: 20px 70px;
+        height: 93vh;
+
+        @include mobile {
+            padding: 10px;
+        }
+    }
+}

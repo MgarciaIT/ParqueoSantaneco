@@ -1,0 +1,12 @@
+@import "../../style.scss";
+
+.footer{
+    @include themify($themes){
+        align-items: center;
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        background-color: themed("bg");
+        color: themed("icon");
+    }
+}

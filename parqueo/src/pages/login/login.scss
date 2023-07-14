@@ -1,0 +1,56 @@
+.login{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .card{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        border-radius: 10px;
+        min-height: 600px;
+        overflow: hidden;
+        .left{
+            flex: 1;
+            background: url("./../../img/logo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .right{
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                input{
+                    border: none;
+                    border-bottom: 1px solid lightgrey;
+                    padding: 20px 10px;
+                }
+                button{
+                    width: 50%;
+                    padding: 10px;
+                    border: none;
+                    background-color: #2A6CF0;
+                    color: white;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+            .error{
+                border-radius: 5px;
+                color: red;
+                font-size: 27px;
+                align-items: center;
+                padding: 15px;
+            }
+        }
+    }
+}
