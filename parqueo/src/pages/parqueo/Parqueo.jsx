@@ -142,7 +142,7 @@ const Parqueo = () => {
   ********************************************************************************************* */
 
   const getParqueo = async() => {
-    await axios.get("http://localhost:4000/api/parqueo")
+    await axios.get("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/parqueo")
     .then(response => {
       setData(response.data)
     }).catch(error => {
@@ -151,7 +151,7 @@ const Parqueo = () => {
   }
 
   const getCliente = async() => {
-    await axios.get("http://localhost:4000/api/parqueo/clientes")
+    await axios.get("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/parqueo/clientes")
     .then(response => {
       setCliente(response.data)
     }).catch(error => {
@@ -160,7 +160,7 @@ const Parqueo = () => {
   }
 
   const getMarca = async() => {
-    await axios.get("http://localhost:4000/api/parqueo/marca")
+    await axios.get("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/parqueo/marca")
     .then(response => {
       console.log(response.data)
       setMarca(response.data)
@@ -170,7 +170,7 @@ const Parqueo = () => {
   }
 
   const getPago = async() => {
-    await axios.get("http://localhost:4000/api/parqueo/pago")
+    await axios.get("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/parqueo/pago")
     .then(response => {
       console.log(response.data)
       setPago(response.data)
@@ -180,7 +180,7 @@ const Parqueo = () => {
   }
 
   const getDocumento = async() => {
-    await axios.get("http://localhost:4000/api/parqueo/documento")
+    await axios.get("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/parqueo/documento")
     .then(response => {
       console.log(response.data)
       setDocumento(response.data)
@@ -190,7 +190,7 @@ const Parqueo = () => {
   }
 
   const getDescuento = async() => {
-    await axios.get("http://localhost:4000/api/parqueo/descuento")
+    await axios.get("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/parqueo/descuento")
     .then(response => {
       console.log(response.data)
       setDescuento(response.data)
@@ -200,7 +200,7 @@ const Parqueo = () => {
   }
 
   const getUltimo = async (e) =>{
-    await axios.get("http://localhost:4000/api/parqueo/ultimo")
+    await axios.get("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/parqueo/ultimo")
     .then(response => {
       imprimirRegistro(response.data);
     }).catch(error => {
@@ -209,7 +209,7 @@ const Parqueo = () => {
   }
 
   const Guardar = async() => {
-    await axios.post("http://localhost:4000/api/parqueo/crear", body)
+    await axios.post("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/parqueo/crear", body)
     .then(response => {
       const nuevoRegistro = response.data;
       setData(data.concat(nuevoRegistro))

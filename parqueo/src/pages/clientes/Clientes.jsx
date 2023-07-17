@@ -89,7 +89,7 @@ const Clientes = () => {
    ********************************** Peticiones axios a la api **********************************
   ********************************************************************************************* */
   const getClientes = async () => {
-    await axios.get("http://localhost:4000/api/clientes")
+    await axios.get("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/clientes")
     .then(response => {
       console.log(response.data)
       setData(response.data)
@@ -99,7 +99,7 @@ const Clientes = () => {
   }
 
   const Guardar = async () => {
-    await axios.post("http://localhost:4000/api/clientes/crear", body)
+    await axios.post("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/clientes/crear", body)
     .then(response => {
       setData(data.concat(response.data))
       getClientes()
@@ -111,7 +111,7 @@ const Clientes = () => {
   }
 
   const Editar = async () => {
-    await axios.post("http://localhost:4000/api/clientes/editar", body)
+    await axios.post("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/clientes/editar", body)
     .then(response => {
       setData(data.concat(response.data))
       getClientes()
@@ -123,7 +123,7 @@ const Clientes = () => {
   }
 
   const Eliminar = async (id) => {
-    await axios.post("http://localhost:4000/api/clientes/eliminar", id)
+    await axios.post("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/clientes/eliminar", id)
     .then(response => {
       getClientes()
       ToastExito("Cliente Eliminado")

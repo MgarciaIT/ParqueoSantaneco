@@ -91,7 +91,7 @@ const Usuarios = () => {
   ********************************************************************************************* */
 
   const getUser = async() => {
-    await axios.get("http://localhost:4000/api/usuarios")
+    await axios.get("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/usuarios")
     .then(response => {
       console.log(response.data)
       setData(response.data)
@@ -101,7 +101,7 @@ const Usuarios = () => {
 
   
   const getRol = async() => {
-    await axios.get("http://localhost:4000/api/usuarios/roles")
+    await axios.get("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/usuarios/roles")
     .then(response => {
       setRol(response.data)
     }).catch(error => {
@@ -110,7 +110,7 @@ const Usuarios = () => {
 
   const Guardar = async () => {
     console.log(body);
-    await axios.post("http://localhost:4000/api/usuarios/crear", body)
+    await axios.post("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/usuarios/crear", body)
     .then(response => {
       setData(data.concat(response.data))
       getUser()
@@ -122,7 +122,7 @@ const Usuarios = () => {
   }
 
   const Editar = async () => {
-    await axios.post("http://localhost:4000/api/usuarios/editar", body)
+    await axios.post("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/usuarios/editar", body)
     .then(response => {
       setData(data.concat(response.data))
       getUser()
@@ -134,7 +134,7 @@ const Usuarios = () => {
   }
 
   const Eliminar = async (id) => {
-    await axios.post("http://localhost:4000/api/usuarios/eliminar", id)
+    await axios.post("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/usuarios/eliminar", id)
     .then(response => {
       getUser()
       ToastExito("Usuario Eliminado")

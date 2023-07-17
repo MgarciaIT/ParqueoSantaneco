@@ -7,9 +7,10 @@
 import mysql from "mysql"
 
 export const db = mysql.createConnection({
-    host:"localhost",
-    port:"3307",
-    user:"root",
-    password:"root",
-    database:"parqueo_bd"
+    host:"us-cdbr-east-06.cleardb.net",
+    user:"bd11fa2807975b",
+    password:"e51ea5a4",
+    database:"heroku_cc591d012db3d9d"
 })
+
+//mysql://bd11fa2807975b:e51ea5a4@us-cdbr-east-06.cleardb.net/heroku_cc591d012db3d9d?reconnect=true

@@ -19,7 +19,7 @@ export const AuthContextProvider = ({children}) => {
      * Funcion con peticion Axios para iniciar sesion
      */
     const login = async (inputs) => {
-        const res = await axios.post("http://localhost:4000/api/auth/login", inputs, {
+        const res = await axios.post("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/auth/login", inputs, {
             withCredentials:true
         })
 

@@ -60,7 +60,7 @@ const Reportes = () => {
   const [valueZ, setValueZ] = React.useState('1')
   const getCorteX = async (e) => {
     try {
-      await axios.get("http://localhost:4000/api/reportes/cortex")
+      await axios.get("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/reportes/cortex")
       .then(response => {
         console.log(response.data)
         setDataX(response.data)
@@ -74,7 +74,7 @@ const Reportes = () => {
 
   const getCorteZ = async(e) => {
     try {
-      await axios.get("http://localhost:4000/api/reportes/cortez")
+      await axios.get("https://parqueosantaneco-36063810dd2b.herokuapp.com/api/reportes/cortez")
       .then(response => {
         console.log(response.data)
         setDataZ(response.data)

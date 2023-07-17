@@ -26,7 +26,7 @@ const Navbar = () => {
     const logout = async (e) => {
         e.preventDefault()
         try{
-            await axios.post("http://localhost:4000/api/auth/logout")
+            await axios.post("https://parqueosantaneco-36063810dd2b.herokuapp.com/auth/logout")
             document.cookie = "accessToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
             localStorage.clear();
             navigate("/login")
