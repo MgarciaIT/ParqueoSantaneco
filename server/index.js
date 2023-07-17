@@ -28,6 +28,6 @@ app.use("/api/parqueo", parqueoRoutes)
 app.use("/api/reportes", reportesRoutes)
 app.use("/api/auth", authRoutes)
 
-app.listen(4000, () => {
-    console.log("API working!")
+app.listen(process.env.PORT || PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 })
